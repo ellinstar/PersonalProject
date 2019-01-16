@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="761.0" prefWidth="1065.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="asControl.MainController">
+  <tabs>
+    <Tab fx:id="tapStudentMain" text="학생관리">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtNameSearch" alignment="CENTER_RIGHT" layoutX="23.0" layoutY="14.0" prefHeight="28.0" prefWidth="189.0" promptText="학생이름">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnNameSearch" layoutX="229.0" layoutY="14.0" mnemonicParsing="false" text="검색">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnStu" layoutX="701.0" layoutY="14.0" mnemonicParsing="false" text="학생등록">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnStuAdd" layoutX="796.0" layoutY="14.0" mnemonicParsing="false" text="전입생등록">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnHwpOut" layoutX="907.0" layoutY="14.0" mnemonicParsing="false" text="학생별잔액.hwp">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tbStudent" layoutX="23.0" layoutY="52.0" prefHeight="593.0" prefWidth="1000.0">
+                    <columns>
+                      <TableColumn prefWidth="100.0" text="No." />
+                      <TableColumn prefWidth="70.0" text="학년" />
+                        <TableColumn prefWidth="70.0" text="반" />
+                        <TableColumn prefWidth="150.0" text="이름" />
+                        <TableColumn minWidth="5.0" prefWidth="250.0" text="가구자격" />
+                        <TableColumn prefWidth="155.0" text="현재잔액" />
+                        <TableColumn prefWidth="204.0" text="상태" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="laYear" layoutX="43.0" layoutY="659.0" prefHeight="15.0" prefWidth="105.0" textAlignment="RIGHT" underline="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="148.0" layoutY="659.0" text="학년도">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="675.0" prefHeight="18.0" prefWidth="73.0" text="연간지원금">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="laYearSubsidy" layoutX="102.0" layoutY="675.0" prefHeight="15.0" prefWidth="92.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="198.0" layoutY="677.0" text="원">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnClose" layoutX="503.0" layoutY="681.0" mnemonicParsing="false" text="종료">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+    </Tab>
+    <Tab fx:id="tapSubjectMain" text="강좌관리">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtSubSearch" alignment="CENTER" layoutX="26.0" layoutY="21.0" promptText="강좌명">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnSubSearch" layoutX="198.0" layoutY="21.0" mnemonicParsing="false" text="검색">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSubject" layoutX="750.0" layoutY="21.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="개설강좌등록">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLessonlist" layoutX="895.0" layoutY="21.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="수강생명단.xslx">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tbSubject" layoutX="31.0" layoutY="75.0" prefHeight="540.0" prefWidth="1000.0">
+                    <columns>
+                      <TableColumn fx:id="colClassNum" prefWidth="138.0" text="강좌번호" />
+                      <TableColumn fx:id="colClassName" prefWidth="195.0" text="강좌명" />
+                        <TableColumn fx:id="colClassPart" prefWidth="116.0" text="분반" />
+                        <TableColumn fx:id="colPersonnel" prefWidth="132.0" text="자유수강인원" />
+                        <TableColumn fx:id="colTuition" prefWidth="137.0" text="수강료" />
+                        <TableColumn fx:id="colTextbook" prefWidth="132.0" text="교재비" />
+                        <TableColumn fx:id="colMaterial" prefWidth="154.0" text="재료비" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="btnClose" alignment="CENTER" layoutX="505.0" layoutY="676.0" mnemonicParsing="false" text="종료">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+    </Tab>
+      <Tab fx:id="tapFreeCondition" text="자유수강권운영현황">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+      <Tab fx:id="tapUsedCondition" text="회수대장">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

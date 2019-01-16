@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+	fx:controller="asControl.StudentAddController" alignment="CENTER">
+	<padding>
+		<Insets top="10" right="10" bottom="10" left="10" />
+	</padding>
+	<spacing>10</spacing>
+		<HBox>
+			<spacing>15</spacing>
+			<children>
+				<TextField  fx:id="txtNameSearch" prefWidth="100"
+					promptText="이름" />
+				<Button fx:id="btnNameSearch" text="검색" />
+				<Button fx:id="btnStu" text="학생등록" />
+				<Button fx:id="btnStuAdd" text="전입생등록" />
+				<Button fx:id="btnHwpOut" text="학생별잔액hwp" />
+			</children>
+		</HBox>
+		<TableView fx:id="tbStudent" prefHeight="400"
+			prefWidth="600" />
+		<HBox>
+			<spacing>15</spacing>
+			<children>
+				<Label fx:id="laYear" prefWidth="100" />
+				<Label text="학년도" />
+				<Button fx:id="btnClose" text="종료" alignment="CENTER" />
+			</children>
+		</HBox>
+	
+</VBox>
+
